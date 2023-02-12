@@ -1,0 +1,8 @@
+{% extends 'base.html'%}
+{% block body%}
+{%if isactive %}
+<h1> {{username}} is active</h1>
+{% else %}
+<h1> {{username}} is inactive</h1>
+{%endif %}
+{%endblock%}

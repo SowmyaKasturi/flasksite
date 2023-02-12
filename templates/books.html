@@ -1,0 +1,23 @@
+{% extends 'base.html'%}
+<html>
+    <body>
+        {% block body%}
+        <div class="container">
+            <div class="row">
+                {% for i in range(books|length) %}
+                <div class="col-md-4">
+                    <div class="card" style="width: 18rem;">
+                        <img style = "width:150px;height: 150px;"class="card-img-top" src="{{books[i]["cover"]}}" alt="Card image cap">
+                        <div class="card-body">
+                            <h5 class="card-title">{{books[i]["name"]}}</h5>
+                            <p class="card-text">{{books[i]["author"]}}</p>
+                            <a href="#" class="btn btn-danger">Buy Now</a>
+                        </div>
+                    </div>
+                </div>
+                {%endfor%}
+            </div>
+        </div>
+        {% endblock%}
+    </body>
+</html>
